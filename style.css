@@ -1,0 +1,101 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 0.9375rem;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--Very-light-gray);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*================Blocks============ */
+.card-component {
+  display: flex;
+  justify-content: center;
+  max-width: 57.375rem;
+  border-radius: 2rem;
+}
+
+/*================Elements============ */
+
+.card-component__column {
+  flex: 1;
+  padding: 2.5rem;
+}
+
+.card-component__title {
+  margin: 1.5rem 0;
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+}
+
+.card-component__btn {
+  display: inline-block;
+  margin-top: 4rem;
+  background-color: var(--Very-light-gray);
+  text-decoration: none;
+  border-radius: 2rem;
+  border: 2px solid var(--Transparent-white);
+  padding: 1em 2em;
+}
+
+/*================Modifiers============ */
+.card-component__column_a {
+  background-color: var(--Bright-orange);
+}
+.card-component__column_b {
+  background-color: var(--Dark-cyan);
+}
+.card-component__column_c {
+  background-color: var(--Very-dark-cyan);
+}
+
+.card-component__btn_a {
+  color: var(--Bright-orange);
+}
+
+.card-component__btn_b {
+  color: var(--Dark-cyan);
+}
+
+.card-component__btn_c {
+  color: var(--Very-dark-cyan);
+}
+
+/*hover states for buttons*/
+.card-component__btn:hover {
+  color: var(--Transparent-white);
+}
+.card-component__btn_a:hover {
+  background-color: var(--Bright-orange);
+}
+.card-component__btn_b:hover {
+  background-color: var(--Dark-cyan);
+}
+.card-component__btn_c:hover {
+  background-color: var(--Very-dark-cyan);
+}
+
+/* mobile view*/
+@media screen and (max-width: 56.25rem) {
+  .card-component {
+    flex-direction: column;
+    max-width: 20.375rem;
+  }
+}
